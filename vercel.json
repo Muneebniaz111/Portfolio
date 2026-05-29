@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "nodeVersion": "20.x",
+  "env": {
+    "EMAIL_USER": "@EMAIL_USER",
+    "EMAIL_PASSWORD_ENCRYPTED": "@EMAIL_PASSWORD_ENCRYPTED",
+    "ENCRYPTION_KEY": "@ENCRYPTION_KEY",
+    "RECIPIENT_EMAIL": "@RECIPIENT_EMAIL"
+  }
+}

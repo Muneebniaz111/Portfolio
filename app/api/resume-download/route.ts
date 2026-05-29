@@ -11,7 +11,7 @@ export async function GET(_req: NextRequest) {
   // 1. Try the in-memory / /tmp store (uploaded via admin OTP flow)
   const stored = await getLatestResume();
   if (stored) {
-    return new NextResponse(stored.data, {
+    return new NextResponse(new Uint8Array(stored.data), {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
@@ -28,7 +28,7 @@ export async function GET(_req: NextRequest) {
   const defaultResumePath = path.join(process.cwd(), "public", "resume", "MN Resume-Developer.pdf");
   try {
     const buf = await fs.readFile(defaultResumePath);
-    return new NextResponse(buf, {
+    return new NextResponse(new Uint8Array(buf), {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
