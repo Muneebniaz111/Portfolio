@@ -1,0 +1,24 @@
+EDUCATION
+Bachelor of Software Engineering | Bahria University, Karachi | June 2026 | Pursuing comprehensive software engineering degree with focus on full-stack development, data structures, algorithms, and system design.
+Pre-Engineering | Bahria Model College, Majeed SRE | 2021 | 
+
+CERTIFICATIONS
+Meta Back-End Developer Professional Certificate | Meta / Coursera | Feb 2025 - Apr 2026 | Comprehensive 9-course program covering servers, databases, Python, Django, RESTful APIs, SQL, data structures, and full-stack capstone project.
+React Basics | Meta / Coursera | Apr 2023 - May 2023 | Mastered React fundamentals including JSX, props, state, lifecycle methods, and component-based architecture.
+
+SKILLS
+Programming Languages | Python, JavaScript, HTML5, CSS3, SQL, C#, Java
+Frameworks & Libraries | React.js, Django, Bootstrap, Chart.js, .NET (ASP.NET Core), Node.js
+Database Management | MySQL, MongoDB, PostgreSQL
+Version Control | Git, GitHub
+Tools & Platforms | Visual Studio Code, Google Colab, Jupyter Notebook, Figma, Visual Studio
+Data & AI Tools | TensorFlow, NumPy, Pandas, Pillow
+Specializations | RESTful APIs, MVC Architecture, Responsive Web Design, Data Visualization, Full-Stack Development
+
+CONTACT
+Phone | +92-311-5445737
+Phone | +92-300-3450384 (WhatsApp)
+Email | muneebniaz258@gmail.com
+LinkedIn | https://www.linkedin.com/in/muneeb-niaz-7295a8329/
+GitHub | https://github.com/Muneebniaz111
+Location | Pakistan
