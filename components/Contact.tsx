@@ -15,7 +15,7 @@ const CODE_LINES = [
   { text: '  name:     "Muneeb Niaz",'                        },
   { text: '  role:     "Software Engineer",'                   },
   { text: '  services: ["Frontend","Backend","APIs"],'         },
-  { text: '  stack:    ["React","Django","ASP.NET","Node"],'   },
+  { text: '  stack:    ["Backend", "Full-Stack", "APIs", "AI Integration"],'   },
   { text: '  location: "Karachi, Pakistan",'                   },
   { text: "  available: true,"                                 },
   { text: "};"                                                 },
