@@ -197,7 +197,7 @@ function TerminalWithCallback({
               <span>
                 {tokens.map((tok, ti) => <span key={ti} style={{ color:tok.color }}>{tok.text}</span>)}
                 {isActive && (
-                  <span style={{ display:"inline-block", width:"2px", height:"1.1em", background:"#6366f1", verticalAlign:"text-bottom", animation:"termCursor 1s step-end infinite" }} />
+                  <span style={{ display:"inline-block", width:"2px", height:"1.1em", background:"#6366f1", verticalAlign:"text-bottom" }} />
                 )}
               </span>
             </div>
@@ -354,10 +354,7 @@ const Hero = () => {
             <div>
               <p className="overline mb-3">Biography</p>
               <p className="label" style={{ lineHeight: 1.8 }}>
-                Software Engineer focused on building scalable and efficient applications. Aspiring Full Stack Developer,
-                currently a Backend Developer with excellent knowledge of Frontend technologies. Final-year Software
-                Engineering student at Bahria University.
-              </p>
+                Results-driven Software Engineer specializing in scalable back-end systems with strong Frontend expertise. Passionate about AI integration and evolving into a Full-Stack Developer. Software Engineering graduate from Bahria University, ready to deliver production-ready solutions.             </p>
             </div>
             <div>
               <p className="overline mb-3">Contact</p>
@@ -371,7 +368,7 @@ const Hero = () => {
                 </a>
                 <a href="mailto:muneebniaz258@gmail.com" className="label flex items-center gap-2 transition-colors" style={{ color: "var(--accent-primary)" }}>
                   <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                   muneebniaz258@gmail.com
                 </a>

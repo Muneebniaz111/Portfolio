@@ -38,14 +38,14 @@ const Navbar = () => {
     const heroElement = document.getElementById("hero");
     if (!heroElement) return;
 
-    // Create observer to detect when ANY part of Hero section is in view
+    // Create observer to detect when Hero section is mostly out of view
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // isIntersecting is true as long as ANY part of Hero is in viewport
+        // isIntersecting is true only when at least 10% of Hero is in viewport
         setIsHeroInView(entry.isIntersecting);
       },
       {
-        threshold: 0, // Fire when ANY part (0%) of Hero enters/leaves viewport
+        threshold: 0.1, // Fire when 10% of Hero is visible
         rootMargin: "0px",
       }
     );
@@ -119,6 +119,13 @@ const Navbar = () => {
       if (e.clientY <= HOVER_ZONE_HEIGHT) {
         cancelHide();
         setIsVisible(true);
+      } else if (isHeroInView) {
+        // Hero is in view, keep navbar visible regardless of cursor position
+        cancelHide();
+        setIsVisible(true);
+      } else {
+        // Hero is out of view and cursor is not near top, schedule hide
+        scheduleHide();
       }
     };
 
