@@ -290,7 +290,7 @@ function MobileHeadingSection({ runKey }: { runKey: number }) {
           </h1>
           <div className="flex items-center justify-center gap-2 flex-wrap">
             <span className="role-badge">Software Engineer</span>
-            <span className="role-badge" style={{ background: "var(--accent-primary)" }}>Full-Stack Dev</span>
+            <span className="role-badge" style={{ background: "var(--accent-primary)" }}>Back-End Developer</span>
           </div>
         </motion.div>
       )}
