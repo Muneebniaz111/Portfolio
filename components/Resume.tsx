@@ -53,6 +53,45 @@ const contact = {
   location: "Karachi, Pakistan",
 };
 
+const resumeContent = {
+  summary: "Junior Backend Developer and Full Stack Developer with 1 year of freelance experience and a .NET internship at MidsOnline, Karachi — building production-grade apps across finance, healthcare, and education. Skilled in React.js, Django, Python, REST APIs, FastAPI, and ASP.NET Core, with proven AI/ML delivery: a CNN eye disease classifier at 90%+ accuracy, an HBL Car Loan Calculator with AI-driven forecasting, and an AI-Powered Car Image Background Replacement System built with .NET Web API and AI image processing workflows. Meta Back-End Developer certified (Coursera, 9 courses). BSE finalist at Bahria University, Karachi (June 2026). Open to Backend, Full Stack, and AI/ML roles — on-site (Karachi / Islamabad / Lahore) or remote.",
+  highlights: [
+    "90%+ CNN validation accuracy on a 5,000+ image medical dataset using TensorFlow/Keras — deployed via Flask REST API with sub-2-second inference.",
+    "Delivered 5+ production-grade applications across finance, healthcare, and education using React.js, Django, Flask, and ASP.NET Core.",
+    "Built an AI-Powered Car Image Background Replacement System at MidsOnline using .NET Web API — integrating vehicle detection, background removal, and AI-generated dealership-ready backgrounds for automotive marketing workflows.",
+  ],
+  experience: [
+    {
+      title: ".Net Developer Intern",
+      company: "MidsOnline, Karachi",
+      period: "1-May 2026 – 15-June 2026",
+      bullets: [
+        "Developed and maintained ASP.NET Core web application modules, contributing to backend features and bug fixes across multiple service layers.",
+        "Wrote and optimized SQL Server queries and stored procedures to support data retrieval and reporting requirements, improving data access efficiency for core application workflows.",
+        "Collaborated with the development team under Agile practices to deliver sprint tasks on schedule, gaining hands-on exposure to .NET MVC architecture, C# business logic, and RESTful service integration.",
+      ],
+    },
+    {
+      title: "Freelance Full Stack Developer",
+      company: "Self-Employed",
+      period: "May 2025 - Present",
+      bullets: [
+        "Designed and delivered 5+ full-stack web applications across finance, healthcare, and education using React.js, Django, Flask, ASP.NET Core, and MySQL — including an HBL Car Loan Calculator with a real-time EMI engine and a React.js analytics dashboard tracking 6 live metrics across 3 responsive breakpoints.",
+        "Built a CNN-based eye disease classifier at 90%+ validation accuracy using TensorFlow/Keras on a 5,000+ image dataset, deployed via a Python/Flask REST API with sub-2-second inference.",
+        "Engineered FinLedger, a Java/MySQL desktop finance app, and developed RESTful backend services in ASP.NET Core with jBCrypt authentication, role-based access control, and MVC architecture.",
+      ],
+    },
+  ],
+  technicalSkills: {
+    "Languages": "Python, JavaScript, TypeScript, HTML5, CSS3, SQL, Java",
+    "Frameworks & Libraries": "React.js, Next.js, Django, Flask, FastAPI, ASP.NET Core, Bootstrap, Chart.js, Node.js",
+    "Databases": "MySQL, PostgreSQL, MongoDB",
+    "AI / Data": "TensorFlow, Keras, CNN, RNN, NumPy, Pandas, Pillow",
+    "DevOps & Tools": "Git, GitHub, GitHub Actions, Docker, Figma, VS Code, Google Colab, Jupyter",
+    "Methodologies": "Agile, Scrum, MVC Architecture, OOP, SDLC, RESTful API Design",
+  },
+};
+
 const projects = [
   {
     title: "HBL Car Loan Calculator",
@@ -493,98 +532,158 @@ export default function Resume() {
 
             {/* Resume */}
             {activeTab === "resume" && (
-              <div className="card p-5 sm:p-8 max-w-xl">
-                <h3 className="subheading text-xl mb-6">Resume PDF</h3>
+              <div className="space-y-6">
+                {/* Professional Summary */}
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 }} className="card p-5 sm:p-7">
+                  <h3 className="subheading text-lg mb-3">Professional Summary</h3>
+                  <p className="label text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+                    {resumeContent.summary}
+                  </p>
+                </motion.div>
 
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept=".pdf"
-                  onChange={e => {
-                    if (e.target.files?.[0]) {
-                      if (!uploadTokenRef.current) {
-                        console.error("[Resume Upload] No token available");
-                        setUploadError("Session expired. Please verify OTP again.");
+                {/* Key Highlights */}
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="card p-5 sm:p-7">
+                  <h3 className="subheading text-lg mb-4">Key Highlights</h3>
+                  <div className="space-y-3">
+                    {resumeContent.highlights.map((highlight, i) => (
+                      <div key={i} className="flex gap-3">
+                        <span className="text-accent-primary text-lg flex-shrink-0">•</span>
+                        <p className="label text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{highlight}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Experience */}
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="card p-5 sm:p-7">
+                  <h3 className="subheading text-lg mb-4">Experience</h3>
+                  <div className="space-y-6">
+                    {resumeContent.experience.map((exp, i) => (
+                      <div key={i} className={i !== 0 ? "border-t pt-6" : ""} style={i !== 0 ? { borderColor: "var(--border-color)" } : {}}>
+                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                          <div>
+                            <h4 className="label font-semibold" style={{ color: "var(--accent-primary)" }}>{exp.title}</h4>
+                            <p className="label text-sm">{exp.company}</p>
+                          </div>
+                          <span className="tag text-xs whitespace-nowrap">{exp.period}</span>
+                        </div>
+                        <ul className="space-y-2 mt-3">
+                          {exp.bullets.map((bullet, bi) => (
+                            <li key={bi} className="flex gap-2">
+                              <span className="text-accent-primary flex-shrink-0">◆</span>
+                              <p className="label text-xs leading-relaxed" style={{ color: "var(--text-secondary)" }}>{bullet}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Technical Skills */}
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="card p-5 sm:p-7">
+                  <h3 className="subheading text-lg mb-4">Technical Skills</h3>
+                  <div className="space-y-3">
+                    {Object.entries(resumeContent.technicalSkills).map(([category, skills], i) => (
+                      <div key={i}>
+                        <p className="overline text-xs mb-1.5" style={{ color: "var(--accent-primary)" }}>{category}</p>
+                        <p className="label text-sm" style={{ color: "var(--text-secondary)" }}>{skills}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Resume PDF Upload Section */}
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="card p-5 sm:p-7">
+                  <h3 className="subheading text-lg mb-4">Resume PDF</h3>
+
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".pdf"
+                    onChange={e => {
+                      if (e.target.files?.[0]) {
+                        if (!uploadTokenRef.current) {
+                          console.error("[Resume Upload] No token available");
+                          setUploadError("Session expired. Please verify OTP again.");
+                          e.target.value = "";
+                          return;
+                        }
+                        validateAndUploadResume(e.target.files[0], uploadTokenRef.current);
+                        // Reset input so the same file can be re-selected if needed
                         e.target.value = "";
-                        return;
                       }
-                      validateAndUploadResume(e.target.files[0], uploadTokenRef.current);
-                      // Reset input so the same file can be re-selected if needed
-                      e.target.value = "";
-                    }
-                  }}
-                  className="hidden"
-                  disabled={uploading}
-                />
-
-                {uploadError && (
-                  <div className="mb-5 p-4 text-sm" style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.4)", color: "#f87171" }}>
-                    {uploadError}
-                  </div>
-                )}
-                {uploadSuccess && (
-                  <div className="mb-5 p-4 text-sm" style={{ background: "rgba(74,222,128,0.1)", border: "1px solid rgba(74,222,128,0.3)", color: "#4ade80" }}>
-                    ✓ Resume uploaded successfully and is now live everywhere!
-                  </div>
-                )}
-                {uploading && !uploadError && (
-                  <div className="mb-5 p-4 text-sm" style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", color: "rgb(147,149,255)" }}>
-                    Uploading your resume to the server...
-                  </div>
-                )}
-
-                <div className="mb-7">
-                  <p className="overline mb-2">File Status</p>
-                  {resumeFileName ? (
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2" style={{ background: "var(--accent-green)" }} />
-                      <p className="label" style={{ color: "var(--text-primary)" }}>{resumeFileName}</p>
-                    </div>
-                  ) : (
-                    <p className="label">No resume uploaded yet</p>
-                  )}
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  {/* Download / View button */}
-                  <button
-                    className="btn-primary text-xs py-2.5 px-5"
-                    onClick={() => {
-                      // Open the download route in a new tab — browser renders PDF inline
-                      window.open("/api/resume-download", "_blank", "noopener,noreferrer");
                     }}
-                  >
-                    Download Resume
-                  </button>
-
-                  {/* Update button — triggers OTP flow */}
-                  <button
-                    className="btn-outline text-xs py-2.5 px-5 flex items-center gap-2"
-                    onClick={handleUpdateResumeClick}
+                    className="hidden"
                     disabled={uploading}
-                    style={{ opacity: uploading ? 0.6 : 1, cursor: uploading ? "not-allowed" : "pointer" }}
-                  >
-                    {uploading ? (
-                      <>
-                        <svg className="w-3.5 h-3.5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                        </svg>
-                        Uploading...
-                      </>
-                    ) : (
-                      <>
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                        Update Resume
-                      </>
-                    )}
-                  </button>
-                </div>
+                  />
 
-                <p className="label mt-4" style={{ fontSize: "11px", color: "var(--text-tertiary)" }}>
-                  🔒 Resume updates require OTP verification sent to your email
-                </p>
+                  {uploadError && (
+                    <div className="mb-4 p-3 text-sm" style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.4)", color: "#f87171" }}>
+                      {uploadError}
+                    </div>
+                  )}
+                  {uploadSuccess && (
+                    <div className="mb-4 p-3 text-sm" style={{ background: "rgba(74,222,128,0.1)", border: "1px solid rgba(74,222,128,0.3)", color: "#4ade80" }}>
+                      ✓ Resume uploaded successfully and is now live everywhere!
+                    </div>
+                  )}
+                  {uploading && !uploadError && (
+                    <div className="mb-4 p-3 text-sm" style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", color: "rgb(147,149,255)" }}>
+                      Uploading your resume to the server...
+                    </div>
+                  )}
+
+                  <div className="mb-4">
+                    <p className="overline mb-2">File Status</p>
+                    {resumeFileName ? (
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2" style={{ background: "var(--accent-green)" }} />
+                        <p className="label text-sm" style={{ color: "var(--text-primary)" }}>{resumeFileName}</p>
+                      </div>
+                    ) : (
+                      <p className="label text-sm">No resume uploaded yet</p>
+                    )}
+                  </div>
+
+                  <div className="flex flex-wrap gap-3">
+                    <button
+                      className="btn-primary text-xs py-2 px-4"
+                      onClick={() => {
+                        window.open("/api/resume-download", "_blank", "noopener,noreferrer");
+                      }}
+                    >
+                      Download Resume
+                    </button>
+
+                    <button
+                      className="btn-outline text-xs py-2 px-4 flex items-center gap-2"
+                      onClick={handleUpdateResumeClick}
+                      disabled={uploading}
+                      style={{ opacity: uploading ? 0.6 : 1, cursor: uploading ? "not-allowed" : "pointer" }}
+                    >
+                      {uploading ? (
+                        <>
+                          <svg className="w-3.5 h-3.5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                          </svg>
+                          Uploading...
+                        </>
+                      ) : (
+                        <>
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                          </svg>
+                          Update Resume
+                        </>
+                      )}
+                    </button>
+                  </div>
+
+                  <p className="label mt-3" style={{ fontSize: "11px", color: "var(--text-tertiary)" }}>
+                    🔒 Resume updates require OTP verification sent to your email
+                  </p>
+                </motion.div>
               </div>
             )}
 
