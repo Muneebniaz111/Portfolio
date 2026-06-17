@@ -78,6 +78,7 @@ const resumeContent = {
       bullets: [
         "Built and maintained 10+ RESTful API endpoints using PHP/Laravel, reducing data-exchange latency ~30% while integrating backend services with React.js frontend clients.",
         "Optimized 3+ MySQL schemas cutting query speed ~25%; implemented JWT authentication with role-based access control — writing clean, scalable code following Laravel MVC architecture.",
+        "Debugged and resolved complex backend issues, implementing comprehensive error handling and logging mechanisms to improve application stability and reduce production incidents.",
       ],
     },
     {

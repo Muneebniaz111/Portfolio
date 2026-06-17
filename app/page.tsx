@@ -1,5 +1,6 @@
 import Projects from "@/components/Projects";
 import Experience from "@/components/Skill";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
 import Resume from "@/components/Resume";
 import Hero from "@/components/Hero";
 import Contact from "@/components/Contact";
@@ -26,6 +27,9 @@ export default function Home() {
         </div>
         <div id="resume">
           <Resume />
+        </div>
+        <div id="experience">
+          <ExperienceTimeline />
         </div>
         <div id="skills">
           <Experience />
