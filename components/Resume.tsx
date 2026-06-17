@@ -72,6 +72,15 @@ const resumeContent = {
       ],
     },
     {
+      title: "Backend Developer Intern",
+      company: "Rizq Tech, Karachi",
+      period: "Dec 2025 – Feb 2026",
+      bullets: [
+        "Built and maintained 10+ RESTful API endpoints using PHP/Laravel, reducing data-exchange latency ~30% while integrating backend services with React.js frontend clients.",
+        "Optimized 3+ MySQL schemas cutting query speed ~25%; implemented JWT authentication with role-based access control — writing clean, scalable code following Laravel MVC architecture.",
+      ],
+    },
+    {
       title: "Freelance Full Stack Developer",
       company: "Self-Employed",
       period: "May 2025 - Present",
