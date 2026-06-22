@@ -66,10 +66,10 @@ const resumeContent = {
       company: "MidsOnline, Karachi",
       period: "1-May 2026 – 15-June 2026",
       bullets: [
-        "Developed and maintained ASP.NET Core web application modules, contributing to backend features and bug fixes across multiple service layers.",
-        "Wrote and optimized SQL Server queries and stored procedures to support data retrieval and reporting requirements, improving data access efficiency for core application workflows.",
-        "Collaborated with the development team under Agile practices to deliver sprint tasks on schedule, gaining hands-on exposure to .NET MVC architecture, C# business logic, and RESTful service integration.",
-      ],
+  "Developed and maintained ASP.NET Core/C# MVC modules with RESTful API integrations, including an AI-powered car image background replacement system — integrating third-party AI APIs (vehicle detection, background removal) and deploying the complete AI workflow into a live production environment.",
+  "Wrote and optimized SQL Server queries and stored procedures to support data retrieval and reporting requirements, improving data access efficiency for core application workflows.",
+  "Collaborated with the development team under Agile practices to deliver sprint tasks on schedule, gaining hands-on exposure to .NET MVC architecture, C# business logic, and RESTful service integration.",
+],
     },
   {
   title: "Developer Intern",
