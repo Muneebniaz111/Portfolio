@@ -16,7 +16,7 @@ const CODE_LINES = [
   { text: '  role:     "Software Engineer",'                   },
   { text: '  services: ["Backend", "Full-Stack", "APIs", "AI Integration"],'         },
   { text: '  stack:    ["Python","Django","ASP.NET","Node"],'   },
-  { text: '  location: "Karachi, Pakistan",'                   },
+  { text: '  location: "Islamabad, Pakistan",'                   },
   { text: "  available: true,"                                 },
   { text: "};"                                                 },
   { text: ""                                                   },

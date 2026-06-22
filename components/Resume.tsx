@@ -50,7 +50,7 @@ const contact = {
   email: "muneebniaz258@gmail.com",
   linkedin: "https://www.linkedin.com/in/muneeb-niaz-7295a8329/",
   github: "https://github.com/Muneebniaz111",
-  location: "Karachi, Pakistan",
+  location: "Islamabad, Pakistan",
 };
 
 const resumeContent = {
@@ -71,16 +71,16 @@ const resumeContent = {
         "Collaborated with the development team under Agile practices to deliver sprint tasks on schedule, gaining hands-on exposure to .NET MVC architecture, C# business logic, and RESTful service integration.",
       ],
     },
-    {
-      title: "Backend Developer Intern",
-      company: "Rizq Tech, Karachi",
-      period: "Dec 2025 – Feb 2026",
-      bullets: [
-        "Built and maintained 10+ RESTful API endpoints using PHP/Laravel, reducing data-exchange latency ~30% while integrating backend services with React.js frontend clients.",
-        "Optimized 3+ MySQL schemas cutting query speed ~25%; implemented JWT authentication with role-based access control — writing clean, scalable code following Laravel MVC architecture.",
-        "Debugged and resolved complex backend issues, implementing comprehensive error handling and logging mechanisms to improve application stability and reduce production incidents.",
-      ],
-    },
+  {
+  title: "Developer Intern",
+  company: "Rizq, Karachi",
+  period: "Dec 2025 – Feb 2026",
+  bullets: [
+    "Built and maintained 10+ RESTful API endpoints, reducing data-exchange latency ~30% while integrating backend services with frontend clients.",
+    "Optimized 3+ database schemas cutting query speed ~25%; implemented authentication with role-based access control — writing clean, scalable code following MVC architecture.",
+    "Worked on AI-powered features and backend services, debugging complex issues and implementing error handling mechanisms to improve application stability.",
+  ],
+},
     {
       title: "Freelance Full Stack Developer",
       company: "Self-Employed",
