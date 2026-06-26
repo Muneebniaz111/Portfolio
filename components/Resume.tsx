@@ -73,7 +73,7 @@ const resumeContent = {
     },
   {
   title: "Backend & AI/ML Developer Intern",
-  company: "Rizq, Karachi",
+  company: "Rizq Tech, Karachi",
   period: "Dec 2025 – Feb 2026",
   bullets: [
     "Built and maintained 10+ RESTful API endpoints, reducing data-exchange latency ~30% while integrating backend services with frontend clients.",
