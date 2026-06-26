@@ -72,7 +72,7 @@ const resumeContent = {
 ],
     },
   {
-  title: "Developer Intern",
+  title: "Backend & AI/ML Developer Intern",
   company: "Rizq, Karachi",
   period: "Dec 2025 – Feb 2026",
   bullets: [
@@ -93,7 +93,7 @@ const resumeContent = {
     },
   ],
   technicalSkills: {
-    "Languages": "Python, JavaScript, TypeScript, HTML5, CSS3, SQL, Java",
+    "Languages": "Python, JavaScript, TypeScript, HTML5, CSS3, SQL, Java, C#",
     "Frameworks & Libraries": "React.js, Next.js, Django, Flask, FastAPI, ASP.NET Core, Bootstrap, Chart.js, Node.js",
     "Databases": "MySQL, PostgreSQL, MongoDB",
     "AI / Data": "TensorFlow, Keras, CNN, RNN, NumPy, Pandas, Pillow",
@@ -603,97 +603,6 @@ export default function Resume() {
                   </div>
                 </motion.div>
 
-                {/* Resume PDF Upload Section */}
-                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="card p-5 sm:p-7">
-                  <h3 className="subheading text-lg mb-4">Resume PDF</h3>
-
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept=".pdf"
-                    onChange={e => {
-                      if (e.target.files?.[0]) {
-                        if (!uploadTokenRef.current) {
-                          console.error("[Resume Upload] No token available");
-                          setUploadError("Session expired. Please verify OTP again.");
-                          e.target.value = "";
-                          return;
-                        }
-                        validateAndUploadResume(e.target.files[0], uploadTokenRef.current);
-                        // Reset input so the same file can be re-selected if needed
-                        e.target.value = "";
-                      }
-                    }}
-                    className="hidden"
-                    disabled={uploading}
-                  />
-
-                  {uploadError && (
-                    <div className="mb-4 p-3 text-sm" style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.4)", color: "#f87171" }}>
-                      {uploadError}
-                    </div>
-                  )}
-                  {uploadSuccess && (
-                    <div className="mb-4 p-3 text-sm" style={{ background: "rgba(74,222,128,0.1)", border: "1px solid rgba(74,222,128,0.3)", color: "#4ade80" }}>
-                      ✓ Resume uploaded successfully and is now live everywhere!
-                    </div>
-                  )}
-                  {uploading && !uploadError && (
-                    <div className="mb-4 p-3 text-sm" style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", color: "rgb(147,149,255)" }}>
-                      Uploading your resume to the server...
-                    </div>
-                  )}
-
-                  <div className="mb-4">
-                    <p className="overline mb-2">File Status</p>
-                    {resumeFileName ? (
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2" style={{ background: "var(--accent-green)" }} />
-                        <p className="label text-sm" style={{ color: "var(--text-primary)" }}>{resumeFileName}</p>
-                      </div>
-                    ) : (
-                      <p className="label text-sm">No resume uploaded yet</p>
-                    )}
-                  </div>
-
-                  <div className="flex flex-wrap gap-3">
-                    <button
-                      className="btn-primary text-xs py-2 px-4"
-                      onClick={() => {
-                        window.open("/api/resume-download", "_blank", "noopener,noreferrer");
-                      }}
-                    >
-                      Download Resume
-                    </button>
-
-                    <button
-                      className="btn-outline text-xs py-2 px-4 flex items-center gap-2"
-                      onClick={handleUpdateResumeClick}
-                      disabled={uploading}
-                      style={{ opacity: uploading ? 0.6 : 1, cursor: uploading ? "not-allowed" : "pointer" }}
-                    >
-                      {uploading ? (
-                        <>
-                          <svg className="w-3.5 h-3.5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                          </svg>
-                          Uploading...
-                        </>
-                      ) : (
-                        <>
-                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                          </svg>
-                          Update Resume
-                        </>
-                      )}
-                    </button>
-                  </div>
-
-                  <p className="label mt-3" style={{ fontSize: "11px", color: "var(--text-tertiary)" }}>
-                    🔒 Resume updates require OTP verification sent to your email
-                  </p>
-                </motion.div>
               </div>
             )}
 
