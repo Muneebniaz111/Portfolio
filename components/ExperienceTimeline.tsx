@@ -23,7 +23,7 @@ const ExperienceTimeline = () => {
       ],
     },
     {
-      title: "Developer Intern",
+      title: "Backend & AI/ML Developer Intern",
       company: "Rizq Tech, Karachi",
       period: "Dec 2025 – Feb 2026",
       bullets: [
