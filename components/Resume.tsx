@@ -50,7 +50,7 @@ const contact = {
   email: "muneebniaz258@gmail.com",
   linkedin: "https://www.linkedin.com/in/muneeb-niaz-7295a8329/",
   github: "https://github.com/Muneebniaz111",
-  location: "Islamabad, Pakistan",
+  location: "Pakistan",
 };
 
 const resumeContent = {
