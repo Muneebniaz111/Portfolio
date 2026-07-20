@@ -62,9 +62,9 @@ const resumeContent = {
   ],
   experience: [
     {
-      title: ".Net Developer Intern",
+      title: ".Net Developer Trainee",
       company: "MidsOnline, Karachi",
-      period: "1-May 2026 – 15-June 2026",
+      period: "May 2026 – Present",
       bullets: [
   "Developed and maintained ASP.NET Core/C# MVC modules with RESTful API integrations, including an AI-powered car image background replacement system — integrating third-party AI APIs (vehicle detection, background removal) and deploying the complete AI workflow into a live production environment.",
   "Wrote and optimized SQL Server queries and stored procedures to support data retrieval and reporting requirements, improving data access efficiency for core application workflows.",
@@ -72,9 +72,9 @@ const resumeContent = {
 ],
     },
   {
-  title: "Backend & AI/ML Developer Intern",
+  title: "Junior Backend Developer",
   company: "Rizq Tech, Karachi",
-  period: "Dec 2025 – Feb 2026",
+  period: "Sept 2025 – April 2026",
   bullets: [
     "Built and maintained 10+ RESTful API endpoints, reducing data-exchange latency ~30% while integrating backend services with frontend clients.",
     "Optimized 3+ database schemas cutting query speed ~25%; implemented authentication with role-based access control — writing clean, scalable code following MVC architecture.",
